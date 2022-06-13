@@ -102,10 +102,9 @@ def mars_hemis(browser):
     # 3. Write code to retrieve the image urls and titles for each hemisphere.
     html = browser.html
     hemi_soup = soup(html, 'html.parser')
-
-    #slide_elem = hemi_soup.select_one('div.list_text')
+    
     hemi_elem = hemi_soup.find_all('div', class_='item')
-    hemi_elem[0].find('a').get('href')
+
     for hemi in hemi_elem:
         hemi_data = {}
         
