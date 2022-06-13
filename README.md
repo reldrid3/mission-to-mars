@@ -2,7 +2,7 @@
 This exercise was to practice HTML/CSS scraping on a series of websites concerning data from Mars.
 
 ## Deliverable 1
-Code to isolate hemisphere data is as follows:
+Code to isolate hemisphere data is as follows, in [Mission_to_Mars_Challenge.ipynb](Mission_to_Mars_Challenge.ipynb):
 ```
 # 2. Create a list to hold the images and titles.
 hemisphere_image_urls = []
@@ -40,14 +40,14 @@ for hemi in hemi_elem:
     browser.back()
 ```
 ## Deliverable 2
-- Implemented mars_hemis() function from Deliverable 1 to scrape the hemisphere data.
-- Updated index.html template to use "mars.image_dicts", which is what I named my list of dictionaries.
+- Implemented mars_hemis() function from Deliverable 1 into [scraping.py](scraping.py) to scrape the hemisphere data.
+- Updated [index.html](templates/index.html) template to use "mars.image_dicts", which is what I named my list of dictionaries.
 ## Deliverable 3
 ### Updates to improve look and function in mobile devices
-1. In the index.html template, I changed each image class from "col-md-6" to "col-xs-6 col-md-6" to allow images to be displayed 2x2 on a mobile device.
-2. In the scraping.py file, I added to the Mars Facts return statement, to replace the table's class of "dataframe" with a bootstrap-enabled 'table table-striped'
+1. In the [index.html](templates/index.html) template, I changed each image class from "col-md-6" to "col-xs-6 col-md-6" to allow images to be displayed 2x2 on a mobile device.
+2. In the [scraping.py](scraping.py) file, I added to the Mars Facts return statement, to replace the table's class of "dataframe" with a bootstrap-enabled 'table table-striped'
 '''
 return df.to_html().replace('dataframe','table table-striped')
 '''
-3. In the index.html template, I added the "active" tag to the "Scrape New Data" button, so that the user can see when the scraping is in progress and then finished.
-4. In the index.html template, I 'swapped' the header sizes of the "Mars Facts" text and the hemisphere caption texts, so that, particularly for mobile devices, "Mars Facts" is a bit more noticable and the hemisphere captions fit better.
+3. In the [index.html](templates/index.html) template, I added the "active" tag to the "Scrape New Data" button, so that the user can see when the scraping is in progress and then finished.
+4. In the [index.html](templates/index.html) template, I 'swapped' the header sizes of the "Mars Facts" text and the hemisphere caption texts, so that, particularly for mobile devices, "Mars Facts" is a bit more noticable and the hemisphere captions fit better.
