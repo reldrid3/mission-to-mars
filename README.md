@@ -49,3 +49,5 @@ for hemi in hemi_elem:
 '''
 return df.to_html().replace('dataframe','table table-striped')
 '''
+3. In the index.html template, I added the "active" tag to the "Scrape New Data" button, so that the user can see when the scraping is in progress and then finished.
+4. In the index.html template, I 'swapped' the header sizes of the "Mars Facts" text and the hemisphere caption texts, so that, particularly for mobile devices, "Mars Facts" is a bit more noticable and the hemisphere captions fit better.
